@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="mk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГРАДСКИ МЕШАН ХОР „ГОРТИНИЈА“ - ГЕВГЕЛИЈА | GORTINIJA Choir</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            800: '#58111A',
+                            900: '#3D0A11',
+                            950: '#26050A',
+                        },
+                        gold: {
+                            300: '#F3E5AB',
+                            400: '#E6C687',
+                            500: '#D4AF37',
+                            600: '#AA820A',
+                        },
+                        navy: {
+                            900: '#0F172A',
+                            950: '#090D16',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
+        }
+        .bg-burgundy-overlay {
+            background: linear-gradient(180deg, rgba(38, 5, 10, 0.85) 0%, rgba(9, 13, 22, 0.95) 100%);
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-burgundy-950/90 backdrop-blur-md border-b border-gold-500/20 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-gold-500/80 flex items-center justify-center bg-burgundy-900 shadow-md group-hover:border-gold-400 transition-colors">
+                        <i class="fa-solid font-serif text-gold-400 text-lg">Г</i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-lg sm:text-xl tracking-wider text-slate-100 group-hover:text-gold-400 transition-colors">ГОРТИНИЈА</span>
+                        <span class="text-[10px] tracking-widest text-gold-400/80 uppercase">Градски Мешан Хор</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-slate-300 hover:text-gold-400 transition-colors">За Нас</a>
+                    <a href="#conductor" class="text-slate-300 hover:text-gold-400 transition-colors">Диригент</a>
+                    <a href="#repertoire" class="text-slate-300 hover:text-gold-400 transition-colors">Проекти</a>
+                    <a href="#awards" class="text-slate-300 hover:text-gold-400 transition-colors">Награди</a>
+                    <a href="#gallery" class="text-slate-300 hover:text-gold-400 transition-colors">Галерија</a>
+                    <a href="#contact" class="px-4 py-2 rounded-md bg-gold-500 text-navy-950 font-semibold hover:bg-gold-400 transition-all shadow-md">Контакт</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-gold-400 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-burgundy-950 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">За Нас</a>
+            <a href="#conductor" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Диригент</a>
+            <a href="#repertoire" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Проекти & Репертоар</a>
+            <a href="#awards" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Награди</a>
+            <a href="#gallery" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Галерија</a>
+            <a href="#contact" class="block text-gold-400 font-semibold py-2">Контакт</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-navy-950">
+        <!-- Background Banner Image with Dark Mask -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600&auto=format&fit=crop" alt="Choral Performance Background" class="w-full h-full object-cover object-center opacity-30 filter blur-xs">
+            <div class="absolute inset-0 bg-burgundy-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-gold-500/40 bg-burgundy-900/60 backdrop-blur-sm mb-6">
+                <i class="fa-solid fa-music text-gold-400 text-xs"></i>
+                <span class="text-xs sm:text-sm font-medium tracking-widest uppercase text-gold-300">Гевгелија, Македонија</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-slate-100 mb-6 leading-tight">
+                ГРАДСКИ МЕШАН ХОР <br>
+                <span class="gold-gradient-text uppercase">„ГОРТИНИЈА“</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-xl text-slate-300 mb-10 font-light leading-relaxed">
+                Спојување на традицијата, духовната музика, светската класика и современиот хорски израз.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-md bg-gold-gradient text-navy-950 font-bold hover:brightness-110 transition-all shadow-lg shadow-gold-500/10">
+                    Запознајте Го Хорот
+                </a>
+                <a href="#repertoire" class="w-full sm:w-auto px-8 py-3.5 rounded-md border border-gold-500/40 hover:bg-gold-500/10 text-slate-100 font-semibold transition-all">
+                    Репертоар & Проекти
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-gold-500/20 max-w-4xl mx-auto">
+                <div class="p-4 bg-burgundy-900/40 rounded-lg border border-gold-500/10">
+                    <div class="font-serif text-3xl font-bold text-gold-400">2006</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Година на основање</div>
+                </div>
+                <div class="p-4 bg-burgundy-900/40 rounded-lg border border-gold-500/10">
+                    <div class="font-serif text-3xl font-bold text-gold-400">80+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Целовечерни концерти</div>
+                </div>
+                <div class="p-4 bg-burgundy-900/40 rounded-lg border border-gold-500/10">
+                    <div class="font-serif text-3xl font-bold text-gold-400">Grand Prix</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Меѓународни награди</div>
+                </div>
+                <div class="p-4 bg-burgundy-900/40 rounded-lg border border-gold-500/10">
+                    <div class="font-serif text-3xl font-bold text-gold-400">10+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Застапени земји</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЗА ХОРОТ (ABOUT SECTION) -->
+    <section id="about" class="py-24 bg-navy-950 relative border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-gold-400 font-medium text-sm tracking-widest uppercase">
+                        <span class="w-8 h-px bg-gold-400"></span>
+                        <span>Историја & Мисија</span>
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-100">
+                        Уметнички дух и традиција од Гевгелија
+                    </h2>
+
+                    <p class="text-slate-300 leading-relaxed">
+                        Градскиот мешан хор **„Гортинија“** е основан во 2006 година во Гевгелија под уметничко раководство на диригентот **маестро Илија Атанасов**. Хорот претставува важен културен столб и музички амбасадор на Гевгелија и Македонија.
+                    </p>
+
+                    <p class="text-slate-300 leading-relaxed">
+                        Преку богата и разновидна изведувачка програма, „Гортинија“ ги опфаќа сите епохи – од византиско црковно пеење и православна духовна музика (*Атанас Бадев - Литургија по св. Јован Златоуст*), класични капитални дела (*Џон Рутер - Реквием*), сè до популарни сцени од филмска музика, џез, евергрин и рок аранжмани (*Rock'n'Choir*, *Mamma Mia*).
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start space-x-3 p-4 rounded-lg bg-burgundy-900/30 border border-gold-500/10">
+                            <i class="fa-solid fa-trophy text-gold-400 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-100">Меѓународен Успех</h4>
+                                <p class="text-xs text-slate-400 mt-1">Освојувач на Grand Prix и сребрени плакети во Италија, Австрија, Турција и Србија.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-4 rounded-lg bg-burgundy-900/30 border border-gold-500/10">
+                            <i class="fa-solid fa-record-vinyl text-gold-400 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-100">Премиерни Изведби</h4>
+                                <p class="text-xs text-slate-400 mt-1">Први премиерни изведби на врвни хорски композиции во Македонија.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Image Frame -->
+                <div class="relative">
+                    <div class="absolute -inset-2 rounded-2xl bg-gradient-to-r from-gold-500/20 to-burgundy-800/40 blur-xl opacity-70"></div>
+                    <div class="relative rounded-2xl overflow-hidden border border-gold-500/30 shadow-2xl bg-burgundy-950">
+                        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1200&auto=format&fit=crop" alt="Choir Group Photo" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <p class="font-serif text-lg font-semibold text-gold-300">Градски Мешан Хор „Гортинија“</p>
+                            <p class="text-xs text-slate-300">Фестивалски настап и целовечерен концерт</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ДИРИГЕНТ (CONDUCTOR SECTION) -->
+    <section id="conductor" class="py-24 bg-burgundy-950/60 relative border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-medium text-sm tracking-widest uppercase">Уметнички Раководител</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-100 mt-2">Маестро Илија Атанасов</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Conductor Photo Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative max-w-md mx-auto">
+                        <div class="absolute -inset-2 rounded-2xl bg-gold-500/20 blur-lg"></div>
+                        <div class="relative rounded-2xl overflow-hidden border-2 border-gold-500/40 shadow-2xl bg-navy-900">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Ilija Atanasov - Conductor" class="w-full h-[500px] object-cover object-top">
+                            <div class="p-6 bg-burgundy-950 border-t border-gold-500/20">
+                                <h3 class="font-serif text-xl font-bold text-slate-100">Илија Атанасов</h3>
+                                <p class="text-gold-400 text-sm font-medium">Диригент & Професор по Музичка Уметност</p>
+                                <div class="mt-4 flex items-center space-x-3 text-xs text-slate-400">
+                                    <span class="flex items-center"><i class="fa-solid fa-envelope text-gold-400 mr-1.5"></i> atanasov.ilija@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conductor Highlights & Bio Summary -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-gold-300">Кратка Биографија</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Илија Атанасов дипломира на Факултетот за музичка уметност (ФМУ) во Скопје на насоката Хорско диригирање во класата на проф. Драган Шуплевски. Својата специјализација по оперско-симфониско и хорско диригирање ја завршува на престижниот Конзерваториум „Николај Римски-Корсаков“ во Санкт Петерсбург, Русија, а магистрира хорско диригирање на тема „Современо хорско творештво“.
+                    </p>
+
+                    <!-- Key Pillars -->
+                    <div class="space-y-3 pt-2">
+                        <div class="p-4 rounded-lg bg-navy-900/60 border border-gold-500/10 flex items-start space-x-3">
+                            <i class="fa-solid fa-graduation-cap text-gold-400 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-200">Специјализации & Мастер-Класови</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Учествувал на мастер-класови кај светски реномирани диригенти: Јуриј Симонов (Московска филхармонија), Валериј Успенски (С. Петерсбург), Даринка Матиќ-Маровиќ и Лилјана Ѓулева.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-lg bg-navy-900/60 border border-gold-500/10 flex items-start space-x-3">
+                            <i class="fa-solid fa-award text-gold-400 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-200">Педагошка и Диригентска Кариера</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">27 години раководи со средношколскиот хор при СОУ „Јосиф Јосифовски“ - Гевгелија, освојувајќи дури 18 први државни награди. Добитник на Седмоноемвриската награда на Гевгелија.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="openBioModal()" class="inline-flex items-center space-x-2 px-6 py-3 rounded-md bg-gold-500 text-navy-950 font-bold hover:bg-gold-400 transition-all shadow-md">
+                            <span>Прочитај ја целата биографија</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРОЕКТИ И РЕПЕРТОАР (PROJECTS & REPERTOIRE) -->
+    <section id="repertoire" class="py-24 bg-navy-950 border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-400 font-medium text-sm tracking-widest uppercase">Музичко Творештво</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-100 mt-2">Проекти & Репертоар</h2>
+                <p class="text-slate-400 text-sm mt-3">Од изворно православна духовна музика до спектакуларни рок и мјузикл аранжмани.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+                <button onclick="filterProjects('all')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gold-500 text-navy-950 transition-all">Сите</button>
+                <button onclick="filterProjects('premieres')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-burgundy-900 text-slate-300 hover:text-gold-400 transition-all">Премиери</button>
+                <button onclick="filterProjects('classical')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-burgundy-900 text-slate-300 hover:text-gold-400 transition-all">Класика & Духовна</button>
+                <button onclick="filterProjects('modern')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-burgundy-900 text-slate-300 hover:text-gold-400 transition-all">Рок, Џез & Евергрин</button>
+            </div>
+
+            <!-- Grid Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="project-card premieres classical bg-burgundy-900/30 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400/50 transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" alt="John Rutter Requiem" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-gold-500 text-navy-950 text-[10px] font-bold rounded-full uppercase">Македонска Премиера</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">John Rutter – Requiem</h3>
+                            <p class="text-xs text-gold-400 font-medium mt-1">Капитално класично дело</p>
+                            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+                                Македонска премиерна изведба на познатото дело од Џон Рутер во изведба на Градскиот мешан хор „Гортинија“.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card modern bg-burgundy-900/30 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400/50 transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=600&auto=format&fit=crop" alt="Rock'n'Choir" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-burgundy-800 border border-gold-500/40 text-gold-300 text-[10px] font-bold rounded-full uppercase">Рок Проект</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">Rock'n'Choir</h3>
+                            <p class="text-xs text-gold-400 font-medium mt-1">Светски рок класици во хорски аранжмани</p>
+                            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+                                Хорски изведби на светски познати рок нумери во придружба на бенд, кои донесоа посебна свежина кај публиката.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card modern bg-burgundy-900/30 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400/50 transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=600&auto=format&fit=crop" alt="Mamma Mia Musical" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-burgundy-800 border border-gold-500/40 text-gold-300 text-[10px] font-bold rounded-full uppercase">Мјузикл</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">Mamma Mia & Disney</h3>
+                            <p class="text-xs text-gold-400 font-medium mt-1">Музичко-сценски спектакли</p>
+                            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+                                Комплетни хорски мјузикли со солисти и кореографија, инспирирани од легендарните ABBA композиции и Дизни мјузиклите.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card classical bg-burgundy-900/30 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400/50 transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1548625149-fc4a29cf7092?q=80&w=600&auto=format&fit=crop" alt="Atanas Badev Liturgy" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-burgundy-800 border border-gold-500/40 text-gold-300 text-[10px] font-bold rounded-full uppercase">Духовна Музика</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">Атанас Бадев – Литургија</h3>
+                            <p class="text-xs text-gold-400 font-medium mt-1">Литургија по св. Јован Златоуст</p>
+                            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+                                Редовно изведување на македонското духовно хорско наследство за време на црковни служби и празнични концерти.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card modern bg-burgundy-900/30 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400/50 transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600&auto=format&fit=crop" alt="Movies in Choir" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-burgundy-800 border border-gold-500/40 text-gold-300 text-[10px] font-bold rounded-full uppercase">Филмска Музика</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">Movies in Choir & Evergreens</h3>
+                            <p class="text-xs text-gold-400 font-medium mt-1">Филмски аранжмани & Македонски евергрини</p>
+                            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+                                Концертни вечери посветени на светски филмски теми и евергрин композиции од познати македонски и светски автори.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card premieres classical bg-burgundy-900/30 border border-gold-500/20 rounded-xl overflow-hidden hover:border-gold-400/50 transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=600&auto=format&fit=crop" alt="Stravinsky Symphony of Psalms" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 px-3 py-1 bg-gold-500 text-navy-950 text-[10px] font-bold rounded-full uppercase">Премиера</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">И. Стравински – Симфонија на Псалми</h3>
+                            <p class="text-xs text-gold-400 font-medium mt-1">Со две пијана</p>
+                            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
+                                Премиерна изведба во Македонија под диригентство на Илија Атанасов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- НАГРАДИ И ПРИЗНАНИЈА (AWARDS SECTION) -->
+    <section id="awards" class="py-24 bg-burgundy-950/80 relative border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-medium text-sm tracking-widest uppercase">Prizes & Honours</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-100 mt-2">Награди и Признанија</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Awards List Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Award 1 -->
+                <div class="p-6 rounded-xl bg-navy-900/80 border border-gold-500/20 hover:border-gold-400 transition-all">
+                    <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Неготин, Србија</span>
+                    <h3 class="font-serif text-lg font-bold text-slate-100 mt-1">GRAND PRIX Награда</h3>
+                    <p class="text-xs text-slate-300 mt-2">
+                        Победник на Меѓународниот хорски натпревар во Неготин, Србија со Мешаниот хор „Гортинија“.
+                    </p>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="p-6 rounded-xl bg-navy-900/80 border border-gold-500/20 hover:border-gold-400 transition-all">
+                    <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Анкара, Турција</span>
+                    <h3 class="font-serif text-lg font-bold text-slate-100 mt-1">Најдобар Диригент & Програма</h3>
+                    <p class="text-xs text-slate-300 mt-2">
+                        Специјална награда за Најдобар диригент (Илија Атанасов) и Најдобра избрана програма на меѓународниот фестивал.
+                    </p>
+                </div>
+
+                <!-- Award 3 -->
+                <div class="p-6 rounded-xl bg-navy-900/80 border border-gold-500/20 hover:border-gold-400 transition-all">
+                    <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Линц, Австрија</span>
+                    <h3 class="font-serif text-lg font-bold text-slate-100 mt-1">Сребрена Плакета</h3>
+                    <p class="text-xs text-slate-300 mt-2">
+                        Меѓународен хорски натпревар „Anton Bruckner“ во Линц, Австрија (2013).
+                    </p>
+                </div>
+
+                <!-- Award 4 -->
+                <div class="p-6 rounded-xl bg-navy-900/80 border border-gold-500/20 hover:border-gold-400 transition-all">
+                    <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Римини, Италија</span>
+                    <h3 class="font-serif text-lg font-bold text-slate-100 mt-1">Втора Награда (Silver Diploma)</h3>
+                    <p class="text-xs text-slate-300 mt-2">
+                        Rimini International Choral Competition во конкуренција со светски хорови (2010).
+                    </p>
+                </div>
+
+                <!-- Award 5 -->
+                <div class="p-6 rounded-xl bg-navy-900/80 border border-gold-500/20 hover:border-gold-400 transition-all">
+                    <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Штип, Македонија (2025)</span>
+                    <h3 class="font-serif text-lg font-bold text-slate-100 mt-1">Прва Награда – АСТИБО</h3>
+                    <p class="text-xs text-slate-300 mt-2">
+                        ПРВА награда на Меѓународниот хорски фестивал АСТИБО со Градскиот хор „Гортинија“.
+                    </p>
+                </div>
+
+                <!-- Award 6 -->
+                <div class="p-6 rounded-xl bg-navy-900/80 border border-gold-500/20 hover:border-gold-400 transition-all">
+                    <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Општина Гевгелија</span>
+                    <h3 class="font-serif text-lg font-bold text-slate-100 mt-1">Седмоноемвриска Награда</h3>
+                    <p class="text-xs text-slate-300 mt-2">
+                        Највисоко општинско признание за долгогодишен придонес во културата и музичката уметност.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ГАЛЕРИЈА (GALLERY SECTION) -->
+    <section id="gallery" class="py-24 bg-navy-950 border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-400 font-medium text-sm tracking-widest uppercase">Фото Архиви</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-100 mt-2">Галерија</h2>
+                <p class="text-slate-400 text-sm mt-2">Моменти од нашите концерти, турнеи и настапи</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600" alt="Concert Photo 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=600" alt="Concert Photo 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600" alt="Concert Photo 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600" alt="Concert Photo 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600" alt="Concert Photo 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600" alt="Concert Photo 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=600" alt="Concert Photo 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1548625149-fc4a29cf7092?q=80&w=1200')" class="group relative h-60 rounded-lg overflow-hidden border border-gold-500/20 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1548625149-fc4a29cf7092?q=80&w=600" alt="Concert Photo 8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-burgundy-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-2xl"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТ (CONTACT SECTION) -->
+    <section id="contact" class="py-24 bg-burgundy-950 relative border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-gold-400 font-medium text-sm tracking-widest uppercase">Поврзете се со нас</span>
+                        <h2 class="font-serif text-3xl font-bold text-slate-100 mt-2">Контакт & АAuditions</h2>
+                        <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                            Сакате да станете дел од нашиот хор, да не поканите на фестивал или да организирате заеднички концерт? Контактирајте нѐ директно.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-4 rounded-xl bg-navy-900/60 border border-gold-500/20">
+                            <div class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider">Е-пошта</p>
+                                <a href="mailto:atanasov.ilija@gmail.com" class="text-slate-200 hover:text-gold-400 font-semibold text-sm transition-colors">atanasov.ilija@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-xl bg-navy-900/60 border border-gold-500/20">
+                            <div class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider">Телефон</p>
+                                <a href="tel:+38970441263" class="text-slate-200 hover:text-gold-400 font-semibold text-sm transition-colors">+389 (0)70 441 263</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-xl bg-navy-900/60 border border-gold-500/20">
+                            <div class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-400">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider">Локација</p>
+                                <p class="text-slate-200 font-semibold text-sm">Гевгелија, Македонија</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Social Link -->
+                    <div class="pt-2">
+                        <a href="https://www.facebook.com/profile.php?id=100063110625017" target="_blank" class="inline-flex items-center space-x-3 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md w-full sm:w-auto justify-center">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                            <span>Посетете ја нашата Facebook Страница</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="p-8 rounded-2xl bg-navy-900/80 border border-gold-500/20 shadow-2xl">
+                        <h3 class="font-serif text-xl font-bold text-slate-100 mb-6">Испратете Порака</h3>
+                        
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Име и Презиме</label>
+                                    <input type="text" required placeholder="Вашето име" class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-gold-500/20 text-slate-100 focus:outline-none focus:border-gold-400 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Е-пошта</label>
+                                    <input type="email" required placeholder="email@example.com" class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-gold-500/20 text-slate-100 focus:outline-none focus:border-gold-400 text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Предмет / Намена</label>
+                                <select class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-gold-500/20 text-slate-100 focus:outline-none focus:border-gold-400 text-sm">
+                                    <option value="audition">Пријава за аудиција (Членство)</option>
+                                    <option value="booking">Покана за концерт / фестивал</option>
+                                    <option value="general">Општо прашање</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Порака</label>
+                                <textarea rows="4" required placeholder="Напишете ја вашата порака тука..." class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-gold-500/20 text-slate-100 focus:outline-none focus:border-gold-400 text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-lg bg-gold-gradient text-navy-950 font-bold hover:brightness-110 transition-all shadow-md">
+                                Испрати Порака
+                            </button>
+                        </form>
+
+                        <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg bg-emerald-900/60 border border-emerald-500/40 text-emerald-200 text-xs text-center">
+                            Благодариме! Вашата порака е успешно испратена. Ќе ве контактираме наскоро.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 border-t border-gold-500/20 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div class="flex items-center space-x-2">
+                <span class="font-serif font-bold text-gold-400 text-sm">ГОРТИНИЈА</span>
+                <span>© 2026 Градски Мешан Хор „Гортинија“ - Гевгелија. Сите права се задржани.</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#about" class="hover:text-gold-400 transition-colors">За Нас</a>
+                <a href="#conductor" class="hover:text-gold-400 transition-colors">Диригент</a>
+                <a href="#contact" class="hover:text-gold-400 transition-colors">Контакт</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONDUCTOR FULL BIO MODAL -->
+    <div id="bio-modal" class="fixed inset-0 z-50 hidden bg-navy-950/90 backdrop-blur-md overflow-y-auto p-4 sm:p-6 md:p-10">
+        <div class="max-w-4xl mx-auto bg-burgundy-950 border border-gold-500/30 rounded-2xl p-6 sm:p-8 shadow-2xl relative text-slate-200">
+            <!-- Close Button -->
+            <button onclick="closeBioModal()" class="absolute top-4 right-4 text-slate-400 hover:text-gold-400 text-2xl p-2 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-8 border-b border-gold-500/20 pb-6">
+                <span class="text-gold-400 font-semibold text-xs uppercase tracking-widest">Комплетна Портфолио Биографија</span>
+                <h2 class="font-serif text-3xl font-bold text-slate-100 mt-1">Илија Атанасов – Диригент & Професор</h2>
+                <p class="text-xs text-slate-400 mt-1">atanasov.ilija@gmail.com | Тел: 070-441-263</p>
+            </div>
+
+            <div class="space-y-6 text-sm leading-relaxed text-slate-300">
+                <div>
+                    <h3 class="font-serif text-lg font-bold text-gold-300 border-b border-gold-500/10 pb-1 mb-2">Образование & Специјализации</h3>
+                    <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm">
+                        <li><strong>1996:</strong> Дипломира Музичка теорија, педагогија и Хорско диригирање (класа проф. Драган Шуплевски), ФМУ Скопје.</li>
+                        <li><strong>2007:</strong> Специјализација по оперско-симфониско и хорско диригирање, Државен конзерваториум „Николај Римски-Корсаков“, Санкт Петерсбург, Русија.</li>
+                        <li><strong>2008:</strong> Магистерски студии по Хорско диригирање („Современо хорско творештво“), ФМУ Скопје.</li>
+                        <li><strong>2023:</strong> Докторанд по образовни науки, Универзитет „Св. Климент Охридски“.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-serif text-lg font-bold text-gold-300 border-b border-gold-500/10 pb-1 mb-2">Диригентско Искуство</h3>
+                    <p class="text-xs sm:text-sm mb-2">
+                        Работел со хорот на просветните работници „Свети Кирил и Методиј“ - Скопје, хорско студио „Кочо Рацин“, градски мешан хор „Вардар“, Академски хор „Мирче Ацев“, хор при Американ Колеџ Скопје, како и со детскиот хор „Божилак“.
+                    </p>
+                    <p class="text-xs sm:text-sm">
+                        Од 2006 година го раководи Градскиот мешан хор **„Гортинија“** - Гевгелија. Паралелно раководи со хорските ансамбли при СОУ „Јосиф Јосифовски“ со над 18 први државни награди.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-serif text-lg font-bold text-gold-300 border-b border-gold-500/10 pb-1 mb-2">Избор од Премиери & Концерти</h3>
+                    <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm">
+                        <li><strong>John Rutter – Requiem:</strong> Македонска премиера со хор „Гортинија“.</li>
+                        <li><strong>И. Стравински – Симфонија на псалми:</strong> Премиера за 2 пијана и хор.</li>
+                        <li><strong>M. Duruflé – Requiem & J.S. Bach – St. Matthew Passion:</strong> Премиерни хорски изведби во Македонија.</li>
+                        <li><strong>Rock'n'Choir & Mamma Mia:</strong> Спектакуларни мјузикл и рок хорски аранжмани.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-gold-500/20 text-right">
+                <button onclick="closeBioModal()" class="px-6 py-2.5 rounded-md bg-gold-500 text-navy-950 font-bold hover:bg-gold-400 text-xs uppercase tracking-wider">Затвори</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-navy-950/95 flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-slate-300 hover:text-gold-400 text-3xl focus:outline-none">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged Preview" class="max-w-full max-h-[85vh] rounded-lg border border-gold-500/30 shadow-2xl object-contain">
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Bio Modal
+        function openBioModal() {
+            document.getElementById('bio-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBioModal() {
+            document.getElementById('bio-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Lightbox Gallery
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Project Filters
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.project-filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-gold-500', 'text-navy-950');
+                btn.classList.add('bg-burgundy-900', 'text-slate-300');
+            });
+
+            event.target.classList.remove('bg-burgundy-900', 'text-slate-300');
+            event.target.classList.add('bg-gold-500', 'text-navy-950');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Form Submit Simulation
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('form-feedback');
+            feedback.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
